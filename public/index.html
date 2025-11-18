@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Catalog</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; padding: 20px; }
+    h1 { margin-bottom: 10px; }
+    #products { margin-top: 20px; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+    .card { padding: 12px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #eaeaea; }
+    .stock-true { color: green; font-weight: 600; }
+    .stock-false { color: crimson; font-weight: 600; }
+    button { padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Product Catalog</h1>
+
+  <div>
+    <button id="loadAll">Load All Products</button>
+    <button id="loadInStock">Load In-Stock</button>
+    <button id="loadCategories">Show Categories</button>
+  </div>
+
+  <div id="output" aria-live="polite" style="margin-top:12px"></div>
+  <div id="products"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
